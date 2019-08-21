@@ -1,6 +1,5 @@
 const mongoose       = require('mongoose')
-
-const Joi            = require('joi')
+  ,   Joi            = require('joi')
   ,   {sign}         = require('jsonwebtoken')
   ,   config         = require('config');
  
@@ -56,7 +55,7 @@ const userSchema = new mongoose.Schema({
     password: {
         type:       String,
         required:   true,
-        minlength:  5,
+        minlength:  3,
         maxlength:  1024,
         required:   true
     },
@@ -129,7 +128,7 @@ function verifyCode(req){
     return Joi.validate(req,schema,{abortEarly:false})
 }
  
-const User = mongoose.model('users', userSchema);
+const User                  = mongoose.model('users', userSchema);
 
 exports.registraionVadition = registraionVadition;
 exports.profileValidation   = profileValidation;

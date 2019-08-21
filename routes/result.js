@@ -4,14 +4,15 @@ const router        = require('express').Router()
   ,   admin         = require('../middleware/admin')
 
 
-router.put('/:id',auth, async(req,res)=>{
-});
-
-router.get('/:id',[auth,admin], async(req,res)=>{
+router.get('/:ip/:date/:hour', async(req,res)=>{
+  const result = await Result.findOne({
+    ip:   req.params.ip  ,
+    date: req.params.date,
+    hour: req.params.hour,
+  });
+  res.send(result);
 })
 
-router.delete('/:id',[auth,admin], async(req,res)=>{
-});
 
 
 

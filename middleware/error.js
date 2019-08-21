@@ -14,8 +14,8 @@ module.exports = function(err, req, res, next) {
     // };
 
     res.status(err.status || 500)
-       .send({status:'error',
-              code:'500',
-              msg:'با عرض پوزش خطایی در سیستم رخ داده است، جزئیات این خطا برای تیم فنی ارسال شد',
-              isDone:false});
+       .send({status:   'error',
+              code:     '500',
+              msg:      'با عرض پوزش خطایی در سیستم رخ داده است، جزئیات این خطا برای تیم فنی ارسال شد',
+              isDone:   false});
 }

@@ -1,0 +1,310 @@
+{
+	"info": {
+		"_postman_id": "6be23cb6-d818-4895-8a6b-e6d74595e9ff",
+		"name": "informa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "result",
+			"item": [
+				{
+					"name": "/v1/results/1.1.1.1/2019-08-21/06",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/v1/results/1.1.1.1/2019-08-21/06",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"results",
+								"1.1.1.1",
+								"2019-08-21",
+								"06"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "/users/registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"hamed\",\n\t\"password\":\"123\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/v1/users/registration",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"hamed\",\n\t\"password\":\"123\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/v1/users/login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/5fnbg",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmbmJnIiwiX2lkIjoiNWQ1YTUzOGU0NzFjNGMyMjAwNTllNmU5Iiwicm9sZSI6WyJ1c2VyIiwiYWRtaW4iXSwiaWF0IjoxNTY2MjA3MTUyfQ.fLwpghaam0wXHaUx6dQ6zyPWxGWzyANp1qadqatKc6E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/v1/users/5fnbg",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"5fnbg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/me",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmbmJnIiwiX2lkIjoiNWQ1YTUzOGU0NzFjNGMyMjAwNTllNmU5Iiwicm9sZSI6WyJ1c2VyIiwiYWRtaW4iXSwiaWF0IjoxNTY2MjA3MTUyfQ.fLwpghaam0wXHaUx6dQ6zyPWxGWzyANp1qadqatKc6E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"firstname\":\"hamed\",\r\n\t\"lastname\":\"elahifar\",\r\n    \"email\": \"hamed.elaifar@gmail.com\",\r\n    \"isActive\": false,\r\n    \"enable\": true,\r\n    \"_id\": \"5d5a538e471c4c220059e6e9\",\r\n    \"id\": \"5fnbg\",\r\n    \"createdAt\": \"2019-08-19T07:45:18.236Z\",\r\n    \"updatedAt\": \"2019-08-19T07:45:18.236Z\"\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}/v1/users/me",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImxkNTY1IiwiX2lkIjoiNWQ1Y2QzNGY5MDU4ZDcwNjNhMjk0NWI3Iiwicm9sZSI6WyJ1c2VyIl0sImlhdCI6MTU2NjM2NTQ0Nn0.Ns6e6Z9LeeKon3g9mCq0ddPQIWfBehJpxVqd8ToiGZI"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/v1/users/me",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "target",
+			"item": [
+				{
+					"name": "/v1/targets/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImxkNTY1IiwiX2lkIjoiNWQ1Y2QzNGY5MDU4ZDcwNjNhMjk0NWI3Iiwicm9sZSI6WyJ1c2VyIl0sImlhdCI6MTU2NjM2NTQ0Nn0.Ns6e6Z9LeeKon3g9mCq0ddPQIWfBehJpxVqd8ToiGZI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ip\":\"192168.1.1\",\n    \"fqdn\":\"mysite.com\",\n    \"status\":\"active\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/v1/targets/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"targets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/targets/all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImxkNTY1IiwiX2lkIjoiNWQ1Y2QzNGY5MDU4ZDcwNjNhMjk0NWI3Iiwicm9sZSI6WyJ1c2VyIiwiYWRtaW4iXSwiaWF0IjoxNTY2MzY2MTc0fQ.KCT2kQpPQCo5hBArH93Nkuu8CxWIx32U1xjj3unu2og",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/v1/targets/all",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"targets",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/targets/s6nx6",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImxkNTY1IiwiX2lkIjoiNWQ1Y2QzNGY5MDU4ZDcwNjNhMjk0NWI3Iiwicm9sZSI6WyJ1c2VyIiwiYWRtaW4iXSwiaWF0IjoxNTY2MzY2OTY1fQ.EIkoa_P-XN61zfcccpl8O-dV_gMDumNtSP8HAVpKT5g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"interval\": 1,\r\n        \"_id\": \"5d5cdc7a1bcec80e4d24f73e\",\r\n        \"ip\": \"192.168.1.1\",\r\n        \"fqdn\": \"mysite.com\",\r\n        \"status\": \"active\",\r\n        \"user\": \"5d5cd34f9058d7063a2945b7\",\r\n        \"id\": \"s6nx6\",\r\n        \"createdAt\": \"2019-08-21T05:54:02.471Z\",\r\n        \"updatedAt\": \"2019-08-21T05:54:02.471Z\",\r\n        \"__v\": 0\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}/v1/targets/s6nx6",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"targets",
+								"s6nx6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/v1/targets/s6nx6",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImxkNTY1IiwiX2lkIjoiNWQ1Y2QzNGY5MDU4ZDcwNjNhMjk0NWI3Iiwicm9sZSI6WyJ1c2VyIiwiYWRtaW4iXSwiaWF0IjoxNTY2MzY2OTY1fQ.EIkoa_P-XN61zfcccpl8O-dV_gMDumNtSP8HAVpKT5g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/v1/targets/s6nx6",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"v1",
+								"targets",
+								"s6nx6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

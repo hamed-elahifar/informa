@@ -11,7 +11,7 @@ const router                        = require('express').Router()
 router.get('/me', auth, async(req,res)=>{
     const user = await User
         .findById(req.userinfo._id)
-        .select('-password -__v -opration -role -mix -updateDate -username -verifyCode -deleted -verifyCodeCount -isEmailActive')
+        .select('-password -__v -deleted -isEmailActive');
 
     res.json(user);
 });

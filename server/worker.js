@@ -83,7 +83,7 @@ eventEmitter.on(process.pid, async () => {
         updateINFO
         [moment.utc().format('mm')] = pingResult;
 
-        // console.log(updateINFO,process.pid);
+        console.log(updateINFO,process.pid);
 
         const updateResult = await Result.updateOne({
             $and: [

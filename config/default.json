@@ -1,4 +1,4 @@
 {
-    "db":"mongodb://localhost/informa",
+    "db": "mongodb://localhost:3000/informa?replicaSet=r1",
     "jwt":"6tnB*%DVE$7n6dbv5"
 }

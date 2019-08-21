@@ -3,6 +3,9 @@ const express           = require('express')
   ,   rateLimit         = require('express-rate-limit')
   
   ,   users             = require('../routes/users')
+  ,   targets           = require('../routes/target')
+  ,   results           = require('../routes/result')
+
   ,   helmet            = require('helmet')
   ,   compression       = require('compression')
   ,   error             = require('../middleware/error')
@@ -40,6 +43,8 @@ module.exports = function (app) {
     app.use("/v1/",           limiter);
     app.use(                  httpLogger);
     app.use('/v1/users',      users);
+    app.use('/v1/targets',    targets);
+    app.use('/v1/results',    results);
     
     // 404
     app.use('*', (req, res) => {res.status('404').send({status:'error',code:'404',msg:'هیچ مسیری پیدا نشد',isDone:false})});
