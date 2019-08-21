@@ -19,6 +19,10 @@ router.put('/:id',auth, async(req,res)=>{
     let target = await Target.findOne({id:req.params.id})
     if (!target) return res.send({status:'error',code:'404',msg:'هدف با آی دی ارسالی یافت نشد',isDone:false});
 
+    // ip      = req.body.ip       ||   target.ip
+    // fqdn    = req.body.fqdn     ||   target.fqdn
+    // status  = req.body.status   ||   target.status
+
     target = {
         ip:         req.body.ip,
         fqdn:       req.body.fqdn,
